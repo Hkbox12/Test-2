@@ -1,28 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PWA with Ads</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="manifest" href="manifest.json">
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js')
-                .then(reg => console.log('Service Worker registered!', reg))
-                .catch(err => console.log('Service Worker registration failed:', err));
-        }
-    </script> 
-    <meta name="monetag" content="43307ec4ebdea40c2100a2dd6da3f014">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phone Store - Buy the Latest Phones</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to Your PWA</h1>
-    <p>This is a simple PWA. Ads will appear below once AdSense is set up.</p>
-
-    <!-- AdSense Placeholder -->
-    <div class="ad-container">
-        <p>Ad will be displayed here</p>
+  <header>
+    <div class="container">
+      <h1>Phone Store</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
+  <section class="hero">
+    <div class="container">
+      <h2>Welcome to the Future of Phones</h2>
+      <p>Explore the latest smartphones at unbeatable prices.</p>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <section class="featured-phones">
+    <div class="container">
+      <h2>Featured Phones</h2>
+      <div class="phone-grid">
+        <div class="phone-card">
+          <img src="images/phone1.jpg" alt="Phone 1">
+          <h3>Phone Model X</h3>
+          <p>$699</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="phone-card">
+          <img src="images/phone2.jpg" alt="Phone 2">
+          <h3>Phone Model Y</h3>
+          <p>$799</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+        <div class="phone-card">
+          <img src="images/phone3.jpg" alt="Phone 3">
+          <h3>Phone Model Z</h3>
+          <p>$899</p>
+          <button class="btn">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Phone Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
